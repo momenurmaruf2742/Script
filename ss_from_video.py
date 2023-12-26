@@ -6,7 +6,7 @@ import os
 home_dir = os.path.expanduser('~')
 
 # Set the video file name and path
-video_name = 'nn.mp4'
+video_name = 'Watch Anurager Chhowa S1 Episode 461 on Disney+ Hotstar 1080.mp4'
 video_path = os.path.join(home_dir, 'Downloads', video_name)
 
 # Create a directory to store the screenshots
@@ -40,7 +40,7 @@ while True:
     current_time = frame_num / cap.get(cv2.CAP_PROP_FPS)
 
     # Check if we have reached a new second
-    if current_time >= current_second + 1:
+    if current_time >= current_second + 3:
         # Set the current second to the new second
         current_second = int(current_time)
 
@@ -52,7 +52,7 @@ while True:
 cap.release()
 
 
-## for time frame
+# # for time frame
 # # Create a directory to store the screenshots
 # if not os.path.exists('screenshots'):
 #     os.makedirs('screenshots')
@@ -96,4 +96,20 @@ cap.release()
 
 # # Release the video file
 # cap.release()
-# print("SS DOne")
+
+
+# import cv2
+# import os
+# from playsound import playsound
+
+# # ...
+
+# # Release the video file
+# # cap.release()
+
+# # Play a sound reminder
+# reminder_sound_path = 'good-6081.mp3'
+# playsound(reminder_sound_path)
+
+# print("Script execution completed with sound reminder")
+print("SS DOne")
