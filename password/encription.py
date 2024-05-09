@@ -56,8 +56,8 @@
 # print("Decrypted Text:", decrypted_text)
 
 
-def create_default_matrix(plaintext):
-    num_cols = int(len(plaintext) ** 0.5)
+def create_default_matrix(plaintext,default_columns):
+    num_cols =len(default_columns)
     num_rows = (len(plaintext) + num_cols - 1) // num_cols
     plaintext += 'x' * (num_rows * num_cols - len(plaintext))
     return [list(plaintext[i * num_cols: (i + 1) * num_cols]) for i in range(num_rows)]
@@ -96,7 +96,7 @@ row_permutation = list(map(int, input("Enter row permutation (e.g., 35142): ")))
 
 plaintext = "attackxatxdawn"
 
-default_matrix = create_default_matrix(plaintext)
+default_matrix = create_default_matrix(plaintext,default_columns)
 rearranged_matrix = rearrange_matrix(default_matrix, row_permutation, col_permutation)
 ciphertext = rearranged_matrix
 decrypted_text = decrypt_text(ciphertext, row_permutation, col_permutation)
